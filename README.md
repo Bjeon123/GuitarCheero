@@ -14,6 +14,8 @@ Functionality
 - Score is shown on screen
 - Player is told what accuracy they clicked keys in relation to note
 
+![GitHub Logo](/mvp.png)
+
 Implementation Timeline
 ---------------------------------
 Friday: Research more about canvas and functionality

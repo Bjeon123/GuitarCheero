@@ -18,6 +18,13 @@ MVP
 ---------------------------------
 ![MVP](/mvp.png)
 
+- Player will start on the start screen where there are controls and links to my linkdIn and github
+- Player can pick a song and will be redirected to the game screen
+- In this screen they can click the spacebar to start the game
+- All functionality will be avaliable
+- Once done stats of performance will show as well as link to go back to home screen
+
+
 Implementation Timeline
 ---------------------------------
 Friday: Research more about canvas and functionality

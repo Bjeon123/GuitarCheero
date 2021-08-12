@@ -14,7 +14,9 @@ Functionality
 - Score is shown on screen
 - Player is told what accuracy they clicked keys in relation to note
 
-![GitHub Logo](/mvp.png)
+MVP
+---------------------------------
+![MVP](/mvp.png)
 
 Implementation Timeline
 ---------------------------------

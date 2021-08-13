@@ -27,13 +27,13 @@ MVP
 
 Implementation Timeline
 ---------------------------------
-Friday: Research more about canvas and functionality
-Saturday: Make a project and make guitar stationary circles and make moving circles notes
-Sunday: Add more functionality such as a start screen that shows directions starts game on a click
-Monday: handle errors and make sure the app is responsive
-Tuesday: Make different note patterns based on the song picked
-Wenesday: Perfect all functionality of project and add bonus content
-Thursday: Debug and make sure the code is production grade
+Friday: Research more about canvas and functionality <br />
+Saturday: Make a project and make guitar stationary circles and make moving circles notes <br />
+Sunday: Add more functionality such as a start screen that shows directions starts game on a click <br />
+Monday: handle errors and make sure the app is responsive <br />
+Tuesday: Make different note patterns based on the song picked <br />
+Wenesday: Perfect all functionality of project and add bonus content <br />
+Thursday: Debug and make sure the code is production grade <br />
 
 Bonus
 ---------------------------------

@@ -14,6 +14,13 @@ Functionality
 - Score is shown on screen
 - Player is told what accuracy they clicked keys in relation to note
 
+Technologies to be implemented
+---------------------------------
+- Canvas API to render circles and handle movement)
+- Webpack and Babel to bundle and transpile the source JavaScript code
+- npm to manage project dependencies
+- HTMLMediaElement to play,pause, and mute music
+
 MVP
 ---------------------------------
 ![MVP](/mvp.png)
@@ -27,13 +34,13 @@ MVP
 
 Implementation Timeline
 ---------------------------------
-Friday: Research more about canvas and functionality <br />
-Saturday: Make a project and make guitar stationary circles and make moving circles notes <br />
-Sunday: Add more functionality such as a start screen that shows directions starts game on a click <br />
-Monday: handle errors and make sure the app is responsive <br />
-Tuesday: Make different note patterns based on the song picked <br />
-Wenesday: Perfect all functionality of project and add bonus content <br />
-Thursday: Debug and make sure the code is production grade <br />
+__Friday__: Research more about canvas and functionality <br />
+__Saturday__: Make a project and make guitar stationary circles and make moving circles notes <br />
+__Sunday__: Add more functionality such as a start screen that shows directions starts game on a click <br />
+__Monday__: handle errors and make sure the app is responsive <br />
+__Tuesday__: Make different note patterns based on the song picked <br />
+__Wenesday__: Perfect all functionality of project and add bonus content <br />
+__Thursday__: Debug and make sure the code is production grade <br />
 
 Bonus
 ---------------------------------

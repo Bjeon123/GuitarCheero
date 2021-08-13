@@ -4,7 +4,7 @@ Guitar Cheero
 
 Background
 ---------------------------------
-Guitar Cheero will be a clone of the acclaimed video game GuitarHero. There will be notes represented by circles that will move from the top of the screen to the bottom of the screen into your guitar which is represented by stationary circles. The goal of the game is to get as many notes that you can with the best accuracy possible. In addition there will be bonuses that exist that will be represented by flying objects that will occasionally show up on the screen. These fying objects  will be generally anything that I enjoy to partake in, for example a flying pizza may show up on the screen. 
+Guitar Cheero will be a clone of the acclaimed video game GuitarHero. There will be notes represented by circles that will move from the top of the screen to the bottom of the screen into your guitar which is represented by stationary circles. The goal of the game is to get as many notes that you can with the best accuracy possible. In addition there will be bonuses that exist that will be represented by flying objects that will occasionally show up on the screen. These flying objects  will be generally anything that I enjoy to partake in, for example a flying pizza may show up on the screen. 
 
 Functionality
 ---------------------------------

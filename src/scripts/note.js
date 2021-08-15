@@ -1,25 +1,31 @@
 class Note{
-    constructor(posX,posY,radius,velocity,color,ctx){
-        this.posX=posX;
-        this.posY=posY;
-        this.radius=radius;
-        this.velocity=velocity;
+    constructor(posX,posY,color){
+        this.posX = posX;
+        this.posY = posY;
+        this.velocity=1;
         this.color=color
-        this.draw(ctx);
     }
 
+
     moveNote(){
-        this.posY-=this.velocity;
+        if(this.posY <700){
+            this.posY += this.velocity;
+        }
     }
 
     draw(ctx) {
         ctx.beginPath();
-        ctx.ellipse(this.xPos, this.yPos, this.radius, 10, 0, 0, 2 * Math.PI)
-        ctx.fillStyle = this.color;
+        ctx.ellipse(this.posX, this.posY, 42, 10, 0, 0, 2 * Math.PI);
+        // ctx.fillStyle = this.color;
+        // ctx.fill();
+        // ctx.strokeStyle = "white";
+        // ctx.stroke();
+        // ctx.beginPath();
+        // ctx.arc(this.posX, this.posY, 42.857142857142854, 0, 2 * Math.PI);
+        ctx.fillStyle=this.color;
         ctx.fill();
-        ctx.strokeStyle = "white";
+        ctx.strokeStyle = "grey";
         ctx.stroke();
-        console.log(this);
     };
 
 }

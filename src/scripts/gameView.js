@@ -7,7 +7,6 @@ class GameView{
         this.setStaticKeys();
         this.setupBinds();
         this.animate();
-        console.log(this.game.keys)
     }
 
     static KEYS = {
@@ -19,7 +18,6 @@ class GameView{
         for (let i = 0; i < 5; i++) {
             GameView.KEYS[keys[i]] = this.game.keys[i];
         }
-        console.log(GameView.KEYS);
     }
 
     setupBinds() {

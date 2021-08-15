@@ -6,7 +6,7 @@ class GameView{
         this.ctx=ctx;
         this.setStaticKeys();
         this.setupBinds();
-        this.animate();
+        this.start();
     }
 
     static KEYS = {
@@ -33,29 +33,21 @@ class GameView{
         });
     }
 
-    animate() {
-        this.game.step();
-        this.game.draw(this.ctx);
+    start(){
+        setInterval(
+            function(){
+                this.game.makeNotes();
+            }.bind(this),3000
+        )
+        requestAnimationFrame(this.animate.bind(this));
+    }
 
-        // every call to animate requests causes another call to animate
+    animate(){
+        this.game.draw(this.ctx);
+        this.game.step();
         requestAnimationFrame(this.animate.bind(this));
     };
 
-    // static COLORS={
-    //     0: "green",
-    //     1: "red",
-    //     2: "yellow",
-    //     3: "blue",
-    //     4: "orange"
-    // }
-
-    // makeGuitarKeys(){
-    //     const colors=["green","red","yellow","blue","orange"]
-    //     for (let i = 0; i < 5; i++) {
-    //         const key = new GuitarKey(this.radius, 2 * this.radius + this.radius * 2.5 * i, 600, GameView.COLORS[i])
-    //         this.guitarkeys.push(key);
-    //     }
-    // }
 
 }
 

@@ -19,7 +19,6 @@ class Game{
         "blue": [407.14285714285717, 100],
         "orange": [514.2857142857142, 100]
     }
-    static FPS= 32;
     static numNotes=5;
     static COLORS = {
         0: "green",
@@ -34,16 +33,15 @@ class Game{
             const key = new GuitarKey(Game.radius, 2 * Game.radius + Game.radius * 2.5 * i, 600, Game.COLORS[i])
             this.keys.push(key);
         }
-        console.log(this.keys)
     }
 
     makeNotes(){
+        console.log(1);
         for(let i=0;i<5;i++){
             const rndInt = Math.round(Math.random() * 5);
             const randomColor=Game.COLORS[rndInt];
             this.notes.push(new Note(Game.POSITIONS[randomColor][0], Game.POSITIONS[randomColor][1],randomColor))
         }
-        console.log(this.notes);
     }
 
     allObjects(){
@@ -61,21 +59,25 @@ class Game{
         this.notes.forEach(function(note){
             note.moveNote();
         })
-        console.log(this.notes)
     }
 
-    // checkCollisions(){
-    //     for (let i = 0; i < 5; i++) {
-    //        for(let i=0;i<this.notes.length;i++){
-    //            let d = dist(this.keys[i].xPos, this.keys[i].yPos, this.notes[i].posX, this.notes[i].posY)
-    //            console.log(d);
-    //        }
-    //     }
-    // }
+    checkCollisions(){
+        for (let i = 0; i < 5; i++) {
+           for(let j=0;j<this.notes.length;j++){
+               if(this.keys[i].color===this.notes[j].color){
+                   let diffX = this.keys[i].xPos - this.notes[j].posX;
+                   let diffY = this.keys[i].yPos - this.notes[j].posY;
+                   if(diffY<this.keys[i].radius/2 && this.keys[i].pressed){
+                       this.notes.splice(j,1);
+                   }
+               }
+           }
+        }
+    }
 
     step() {
+        this.checkCollisions();
         this.moveNotes();
-        // this.checkCollisions();
     };
 
 }

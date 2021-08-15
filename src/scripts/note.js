@@ -4,6 +4,7 @@ class Note{
         this.posY = posY;
         this.velocity=1;
         this.color=color
+        this.hit=false
     }
 
 
@@ -16,12 +17,6 @@ class Note{
     draw(ctx) {
         ctx.beginPath();
         ctx.ellipse(this.posX, this.posY, 42, 10, 0, 0, 2 * Math.PI);
-        // ctx.fillStyle = this.color;
-        // ctx.fill();
-        // ctx.strokeStyle = "white";
-        // ctx.stroke();
-        // ctx.beginPath();
-        // ctx.arc(this.posX, this.posY, 42.857142857142854, 0, 2 * Math.PI);
         ctx.fillStyle=this.color;
         ctx.fill();
         ctx.strokeStyle = "grey";

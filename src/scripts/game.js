@@ -1,10 +1,12 @@
 import {Note} from "./note"
 import {GuitarKey} from "./guitarKey"
+import {Stats} from './stats';
 
 class Game{
     constructor() {
         this.notes=[];
         this.keys=[];
+        this.stats = new Stats();
         this.makeGuitarKeys();
         this.makeNotes();
     }
@@ -69,6 +71,7 @@ class Game{
                    let diffY = this.keys[i].yPos - this.notes[j].posY;
                    if(diffY<this.keys[i].radius/2 && this.keys[i].pressed){
                        this.notes.splice(j,1);
+                       this.stats.score+=1;
                    }
                }
            }
@@ -78,6 +81,7 @@ class Game{
     step() {
         this.checkCollisions();
         this.moveNotes();
+        this.stats.updateScore();
     };
 
 }

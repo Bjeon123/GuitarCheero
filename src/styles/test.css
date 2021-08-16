@@ -1,10 +1,29 @@
 body{
-    background-color: grey;
+    background-image: linear-gradient(red, yellow);
+}
+h1{
+    margin: 10px;
+    text-align: center;
+    font-family: Luminari, sans-serif;
+    font-size: 30px;
+}
+
+.left{
+    float: left;
+    margin: 20px;
+}
+
+.right{
+    float: right;
+    margin-right: 50px;
+    height: 400px;
+    width: 250px;
 }
 
 canvas{
     background-color: black;
-    display: block;
-    margin: 0 auto;
+    display: inline;
+    margin-left: 80px;
+    margin-right: auto;
     color: white;
 }

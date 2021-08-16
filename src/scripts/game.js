@@ -50,6 +50,7 @@ class Game{
         this.allObjects().forEach(function (object) {
             object.draw(ctx);
         });
+        this.stats.addScoreToCanvas(ctx);
     };
 
     moveNotes(){
@@ -76,7 +77,6 @@ class Game{
     step() {
         this.checkCollisions();
         this.moveNotes();
-        this.stats.updateScore();
     };
 
 }

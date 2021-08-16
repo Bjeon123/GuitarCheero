@@ -1,13 +1,15 @@
 class Stats{
     constructor(){
-        this.scoreHtml=document.getElementById("score")
         this.score=0;
         this.totalDisks=0;
     }
 
-    updateScore(){
-        this.scoreHtml.innerText=this.score;
+    addScoreToCanvas(ctx) {
+        ctx.font = "30px Luminari";
+        ctx.fillStyle = "white";
+        ctx.fillText("Score: "+this.score, 450, 50)
     }
+
 }
 
 export {Stats};

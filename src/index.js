@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded",function(){
     window.addEventListener("keydown",function(e){
         if(e.key==="m"){
             setTimeout(function(){
-                musicPlayer.play()},3000);
+            musicPlayer.play()},3000);
             const newGameView = new GameView(game, ctx);
         }
     })

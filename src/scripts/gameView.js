@@ -37,17 +37,23 @@ class GameView{
     start(){
         console.log(this.song)
         for(const note in this.song) {
-            setTimeout(
-                function(){
-                    this.game.makeNotes(this.song[note])
-                }.bind(this), 3000 + parseInt(note)
-            )
+            if (Array.isArray(this.song[note])){
+                for (let i = 0; i < this.song[note].length;i++){
+                    setTimeout(
+                        function () {
+                            this.game.makeNotes(this.song[note][i])
+                        }.bind(this), 3000 + parseInt(note)
+                    )
+                }
+            }
+            else{
+                setTimeout(
+                    function(){
+                        this.game.makeNotes(this.song[note])
+                    }.bind(this), 3000 + parseInt(note)
+                )
+            }
         }
-            // setInterval(
-            //     function () {
-            //         this.game.makeNotes()
-            //     }.bind(this), 3000
-            // )
         requestAnimationFrame(this.animate.bind(this));
     }
 

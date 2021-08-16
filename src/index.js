@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded",function(){
     const ctx = canvas.getContext("2d");
     const game = new Game();
     const musicPlayer= new MusicPlayer();
-    // canvas.width/14 
     window.addEventListener("keydown",function(e){
         if(e.key==="m"){
             setTimeout(function(){

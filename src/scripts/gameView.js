@@ -40,7 +40,7 @@ class GameView{
                     setTimeout(
                         function () {
                             this.game.makeNotes(this.song[note][i])
-                        }.bind(this), + parseInt(note)
+                        }.bind(this), 0 + parseInt(note)
                     )
                 }
             }
@@ -48,7 +48,7 @@ class GameView{
                 setTimeout(
                     function(){
                         this.game.makeNotes(this.song[note])
-                    }.bind(this), 0+ parseInt(note)
+                    }.bind(this), 0 + parseInt(note)
                 )
             }
         }

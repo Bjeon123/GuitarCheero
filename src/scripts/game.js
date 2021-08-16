@@ -8,17 +8,25 @@ class Game{
         this.keys=[];
         this.stats = new Stats();
         this.makeGuitarKeys();
+        console.log(this.keys)
     }
 
     static DIM_X = 600;
     static DIM_Y = 700;
     static radius = Game.DIM_X/14;
     static POSITIONS = {
-        "green": [85.71428571428571, 100],
-        "red": [192.8571428571428, 100],
+        "green": [180, 100],
+        "red": [240, 100],
         "yellow": [300, 100],
-        "blue": [407.14285714285717, 100],
-        "orange": [514.2857142857142, 100]
+        "blue": [360, 100],
+        "orange": [420, 100]
+    }
+    static DESTINATION = {
+        "green": [85.71428571428571, 600],
+        "red": [192.85714285714283, 600],
+        "yellow": [300, 600],
+        "blue": [407.14285714285717, 600],
+        "orange": [514.2857142857142, 600]
     }
     static numNotes=5;
     static COLORS = {
@@ -38,7 +46,7 @@ class Game{
 
     makeNotes(color){
         console.log(color);
-        this.notes.push(new Note(Game.POSITIONS[color][0], Game.POSITIONS[color][1],color));
+        this.notes.push(new Note(Game.POSITIONS[color][0], Game.POSITIONS[color][1], Game.DESTINATION[color][0], Game.DESTINATION[color][1],color));
     }
 
     allObjects(){

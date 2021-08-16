@@ -3,27 +3,38 @@ body{
 }
 h1{
     margin: 10px;
+    display: block;
     text-align: center;
     font-family: Luminari, sans-serif;
-    font-size: 30px;
+    font-size: 45px;
+}
+
+#screen{
+    display: flex;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .left{
-    float: left;
+    display: flex;
     margin: 20px;
+    height: 400px;
 }
 
 .right{
-    float: right;
+    display: flex;
     margin-right: 50px;
     height: 400px;
     width: 250px;
 }
 
 canvas{
-    background-color: black;
-    display: inline;
-    margin-left: 80px;
-    margin-right: auto;
+    display: inline-block;
+    margin-left: 0 auto;
+    margin-right:0 auto;
     color: white;
 }

@@ -1,5 +1,4 @@
 import { GuitarKey } from './guitarKey';
-
 class GameView{
     constructor(game,ctx){
         this.game=game;
@@ -35,14 +34,13 @@ class GameView{
     }
 
     start(){
-        console.log(this.song)
         for(const note in this.song) {
             if (Array.isArray(this.song[note])){
                 for (let i = 0; i < this.song[note].length;i++){
                     setTimeout(
                         function () {
                             this.game.makeNotes(this.song[note][i])
-                        }.bind(this), 3000 + parseInt(note)
+                        }.bind(this), + parseInt(note)
                     )
                 }
             }
@@ -50,7 +48,7 @@ class GameView{
                 setTimeout(
                     function(){
                         this.game.makeNotes(this.song[note])
-                    }.bind(this), 3000 + parseInt(note)
+                    }.bind(this), 0+ parseInt(note)
                 )
             }
         }

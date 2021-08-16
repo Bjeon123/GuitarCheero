@@ -2,7 +2,7 @@ class Note{
     constructor(posX,posY,color){
         this.posX = posX;
         this.posY = posY;
-        this.velocity=1;
+        this.velocity=2;
         this.color=color
         this.hit=false
     }

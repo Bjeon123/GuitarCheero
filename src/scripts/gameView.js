@@ -6,6 +6,7 @@ class GameView{
         this.ctx=ctx;
         this.setStaticKeys();
         this.setupBinds();
+        this.song=require("../song_scripts/song1.json");
         this.start();
     }
 
@@ -34,11 +35,19 @@ class GameView{
     }
 
     start(){
-        setInterval(
-            function(){
-                this.game.makeNotes();
-            }.bind(this),3000
-        )
+        console.log(this.song)
+        for(const note in this.song) {
+            setTimeout(
+                function(){
+                    this.game.makeNotes(this.song[note])
+                }.bind(this), 3000 + parseInt(note)
+            )
+        }
+            // setInterval(
+            //     function () {
+            //         this.game.makeNotes()
+            //     }.bind(this), 3000
+            // )
         requestAnimationFrame(this.animate.bind(this));
     }
 

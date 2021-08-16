@@ -8,7 +8,6 @@ class Game{
         this.keys=[];
         this.stats = new Stats();
         this.makeGuitarKeys();
-        this.makeNotes();
     }
 
     static DIM_X = 600;
@@ -37,13 +36,9 @@ class Game{
         }
     }
 
-    makeNotes(){
-        console.log(1);
-        for(let i=0;i<5;i++){
-            const rndInt = Math.round(Math.random() * 5);
-            const randomColor=Game.COLORS[rndInt];
-            this.notes.push(new Note(Game.POSITIONS[randomColor][0], Game.POSITIONS[randomColor][1],randomColor))
-        }
+    makeNotes(color){
+        console.log(color);
+        this.notes.push(new Note(Game.POSITIONS[color][0], Game.POSITIONS[color][1],color));
     }
 
     allObjects(){

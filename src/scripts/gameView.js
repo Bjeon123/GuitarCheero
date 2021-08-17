@@ -6,7 +6,6 @@ class GameView{
         this.setStaticKeys();
         this.setupBinds();
         this.song=require("../song_scripts/song1.json");
-        this.start();
     }
 
     static KEYS = {

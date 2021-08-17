@@ -1,6 +1,7 @@
 class MusicPlayer{
     constructor(){
         this.audio = new Audio("src/assets/songs/Me_and_My_Guitar.mp3");
+        document.getElementById("game-canvas").appendChild(this.audio);
     }
 
     play(){

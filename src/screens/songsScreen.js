@@ -11,6 +11,8 @@ export const renderSongs = function () {
     backBttn.addEventListener("click",function(){
         renderHome();
     })
+    const audioElement = document.querySelector('audio');
+    if (audioElement) audioElement.remove();
     const songsList= document.createElement("ul");
     const h1= document.createElement("h1");
     h1.innerText="Songs List"

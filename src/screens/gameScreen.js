@@ -33,12 +33,13 @@ export const renderGame = function () {
     //buttons functionality
     backBttn.addEventListener("click",function(){
         screen.classList.remove("game");
-        renderSongs();
         musicPlayer.stop();
+        renderSongs();
     })
 
     logo.addEventListener("click",function(){
         screen.classList.remove("game");
+        musicPlayer.stop();
         renderHome();
     })
 

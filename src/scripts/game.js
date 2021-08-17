@@ -1,16 +1,16 @@
 import {Note} from "./note"
 import {GuitarKey} from "./guitarKey"
 import {Stats} from './stats';
+import {NoteResult} from "./noteResult";
 
 class Game{
     constructor() {
         this.notes=[];
+        this.noteResults=[];
         this.keys=[];
         this.stats = new Stats();
         this.makeGuitarKeys();
-        console.log(this.keys)
     }
-
     static DIM_X = 600;
     static DIM_Y = 700;
     static radius = Game.DIM_X/14;
@@ -45,12 +45,11 @@ class Game{
     }
 
     makeNotes(color){
-        console.log(color);
         this.notes.push(new Note(Game.POSITIONS[color][0], Game.POSITIONS[color][1], Game.DESTINATION[color][0], Game.DESTINATION[color][1],color));
     }
 
     allObjects(){
-        return [].concat(this.notes, this.keys);
+        return [].concat(this.notes, this.keys,this.noteResults);
     };
 
     draw(ctx) {
@@ -73,13 +72,36 @@ class Game{
                if(this.keys[i].color===this.notes[j].color){
                    let diffX = this.keys[i].xPos - this.notes[j].posX;
                    let diffY = this.keys[i].yPos - this.notes[j].posY;
-                   if(diffY<this.keys[i].radius/2 && this.keys[i].pressed){
-                       this.notes.splice(j,1);
-                       this.stats.score+=1;
+                   if (diffY > -1*(this.keys[i].radius/2) && diffY<this.keys[i].radius/2 && this.keys[i].pressed){
+                       if(diffY < 15){
+                           this.notes[j].hit = true;
+                           this.deleteNotes(j, "perfect")
+                           this.stats.score += 2;
+                       }
+                       else{
+                           this.notes[j].hit = true;
+                           this.deleteNotes(j, "nice")
+                           this.stats.score += 1;
+                       }
+                   }
+                   else if (diffY <= -1 * (this.keys[i].radius / 2)){
+                       this.notes.splice(j,1)
                    }
                }
            }
         }
+    }
+
+    deleteNotes(noteIndex,accuracy){
+        const color = this.notes[noteIndex].color;
+        this.notes.splice(noteIndex, 1);
+        const noteResult = new NoteResult(accuracy,Game.DESTINATION[color][0], 300);
+        this.noteResults.push(noteResult);
+        let arrCopy=this.noteResults;
+        console.log(this.noteResults);
+        setTimeout(function(){
+            arrCopy.shift();
+        },500)
     }
 
     step() {

@@ -7,6 +7,7 @@ class Note{
         this.color = color
         this.radius=20;
         this.hit=false
+        this.accuracy;
         this.deltaY= (this.destinationY - this.posY)/100;
         this.deltaX =(this.destinationX - this.posX)/100;
         this.deltaRadius=(20/42.7)/3;
@@ -22,12 +23,21 @@ class Note{
     }
 
     draw(ctx) {
-        ctx.beginPath();
-        ctx.ellipse(this.posX, this.posY, this.radius, 10, 0, 0, 2 * Math.PI);
-        ctx.fillStyle=this.color;
-        ctx.fill();
-        ctx.strokeStyle = "grey";
-        ctx.stroke();
+        if(this.hit){
+            ctx.font = '20px serif';
+            ctx.fillStyle = "red";
+            ctx.fillText(this.accuracy, this.posX,this.posY)
+            this.deltaY=1;
+            this.deltaX=0;
+        }
+        else{
+            ctx.beginPath();
+            ctx.ellipse(this.posX, this.posY, this.radius, 10, 0, 0, 2 * Math.PI);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+            ctx.strokeStyle = "grey";
+            ctx.stroke();
+        }
     };
 
 }

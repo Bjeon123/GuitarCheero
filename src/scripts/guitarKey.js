@@ -1,5 +1,3 @@
-import { keys } from "regenerator-runtime";
-
 class GuitarKey{
     constructor(radius,xPos,yPos,color){
         this.radius=radius;

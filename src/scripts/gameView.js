@@ -1,4 +1,3 @@
-import { GuitarKey } from './guitarKey';
 class GameView{
     constructor(game,ctx){
         this.game=game;
@@ -21,7 +20,7 @@ class GameView{
 
     setupBinds() {
         window.addEventListener("keydown", function (e) {
-            if (GameView.KEYS[e.key]) {
+            if (GameView.KEYS[e.key] && GameView.KEYS) {
                 GameView.KEYS[e.key].pressed=true;
             }
         });

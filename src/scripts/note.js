@@ -9,7 +9,7 @@ class Note{
         this.hit=false
         this.deltaY= (this.destinationY - this.posY)/100;
         this.deltaX =(this.destinationX - this.posX)/100;
-        this.deltaRadius=(20/42.7)/3.5;
+        this.deltaRadius=(20/42.7)/3;
     }
 
 

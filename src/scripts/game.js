@@ -28,7 +28,6 @@ class Game{
         "blue": [407.14285714285717, 600],
         "orange": [514.2857142857142, 600]
     }
-    static numNotes=5;
     static COLORS = {
         0: "green",
         1: "red",
@@ -46,6 +45,7 @@ class Game{
 
     makeNotes(color){
         this.notes.push(new Note(Game.POSITIONS[color][0], Game.POSITIONS[color][1], Game.DESTINATION[color][0], Game.DESTINATION[color][1],color));
+        this.stats.totalDisks+=1;
     }
 
     allObjects(){
@@ -76,15 +76,18 @@ class Game{
                        if(diffY < 15){
                            this.notes[j].hit = true;
                            this.deleteNotes(j, "perfect")
+                           this.stats.totalPerfect+=1;
                            this.stats.score += 2;
                        }
                        else{
                            this.notes[j].hit = true;
                            this.deleteNotes(j, "nice")
+                           this.stats.totalNice+=1;
                            this.stats.score += 1;
                        }
                    }
                    else if (diffY <= -1 * (this.keys[i].radius / 2)){
+                       this.stats.totalMissed+=1;
                        this.notes.splice(j,1)
                    }
                }
@@ -98,15 +101,19 @@ class Game{
         const noteResult = new NoteResult(accuracy,Game.DESTINATION[color][0], 300);
         this.noteResults.push(noteResult);
         let arrCopy=this.noteResults;
-        console.log(this.noteResults);
         setTimeout(function(){
             arrCopy.shift();
         },500)
     }
 
+    numCurrentNotes(){
+        console.log(this.notes.length);
+    }
+
     step() {
         this.checkCollisions();
         this.moveNotes();
+        this.numCurrentNotes();
     };
 
 }

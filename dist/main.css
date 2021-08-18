@@ -54,6 +54,7 @@ table {
 body{
     background-color: aliceblue;
 }
+
 h1{
     color: white;
     margin: 10px;
@@ -124,6 +125,7 @@ button{
     border: 2px solid white;
     border-radius: 5%;
     margin: 10px auto;
+    box-shadow: -1.5px 1.5px red, -1px 1px orange, -1px 1px orange;
 }
 
 .gameBackButton{

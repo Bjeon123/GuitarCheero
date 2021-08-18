@@ -28,7 +28,7 @@ export const renderGame = function () {
     const musicPlayer = new MusicPlayer();
     const ctx = canvas.getContext("2d");
     const game = new Game();
-    const newGameView = new GameView(game, ctx);
+    const newGameView = new GameView(game, ctx,musicPlayer);
 
     //buttons functionality
     backBttn.addEventListener("click",function(){

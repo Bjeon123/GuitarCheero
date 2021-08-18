@@ -1,10 +1,14 @@
+import {renderEnd} from "../screens/endGameScreen"
+
 class GameView{
-    constructor(game,ctx){
+    constructor(game,ctx,musicPlayer){
         this.game=game;
         this.ctx=ctx;
         this.setStaticKeys();
         this.setupBinds();
         this.song=require("../song_scripts/song1.json");
+        this.gameRequest;
+        this.musicPlayer=musicPlayer;
     }
 
     static KEYS = {
@@ -50,12 +54,17 @@ class GameView{
                 )
             }
         }
-        requestAnimationFrame(this.animate.bind(this));
+        this.gameRequest=this.animate();
     }
 
     animate(){
         this.game.draw(this.ctx);
         this.game.step();
+        if (this.musicPlayer.audio.currentTime > 5 && this.game.notes.length===0){
+            cancelAnimationFrame(this.gameRequest);
+            this.musicPlayer.stop();
+            return renderEnd(this.game.stats);
+        }
         requestAnimationFrame(this.animate.bind(this));
     };
 

@@ -2,6 +2,9 @@ class Stats{
     constructor(){
         this.score=0;
         this.totalDisks=0;
+        this.totalPerfect=0
+        this.totalNice=0
+        this.totalMissed=0;
     }
 
     addScoreToCanvas(ctx) {

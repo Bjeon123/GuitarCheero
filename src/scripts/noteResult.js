@@ -10,10 +10,10 @@ class NoteResult{
 
     draw(ctx){
         if(this.accuracy==="perfect"){
-            ctx.drawImage(this.perfectNoteImg, this.xPos-30,600,70,70);
+            ctx.drawImage(this.perfectNoteImg, this.xPos-35,600,70,70);
         }
         else{
-            ctx.drawImage(this.niceNoteImg, this.xPos-30, 600, 70, 70);
+            ctx.drawImage(this.niceNoteImg, this.xPos-35, 600, 70, 70);
         }
     }
 }

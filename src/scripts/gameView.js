@@ -65,6 +65,10 @@ class GameView{
             this.musicPlayer.stop();
             return renderEnd(this.game.stats);
         }
+        else if(this.musicPlayer.stopped){
+            this.musicPlayer.stop();
+            return;
+        }
         requestAnimationFrame(this.animate.bind(this));
     };
 

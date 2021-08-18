@@ -31,14 +31,17 @@ export const renderGame = function () {
     const newGameView = new GameView(game, ctx,musicPlayer);
 
     //buttons functionality
+    const audio = document.querySelector("audio")
     backBttn.addEventListener("click",function(){
         screen.classList.remove("game");
+        audio.src = "";
         musicPlayer.stop();
         renderSongs();
     })
 
     logo.addEventListener("click",function(){
         screen.classList.remove("game");
+        audio.src = "";
         musicPlayer.stop();
         renderHome();
     })

@@ -179,6 +179,21 @@ li:hover{
 .hidden{
     display: none;
 }
+
+.all-stats{
+    margin-top: 40px;
+    margin-left: 150px;
+    margin-right: 150px;
+    border: 2px solid #879cf2;
+    border-radius: 5%;
+
+}
+
+h2{
+    text-align: center;
+    color: #879cf2;
+    font-size: 30px;
+}
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/

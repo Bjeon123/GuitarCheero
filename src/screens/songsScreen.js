@@ -15,7 +15,7 @@ export const renderSongs = function () {
     if (audioElement) audioElement.remove();
     const songsList= document.createElement("ul");
     const h1= document.createElement("h1");
-    h1.innerText="Songs List"
+    h1.innerText="Select a Song"
     songs.forEach(function(song){
         const li=document.createElement("li")
         li.innerText=song;

@@ -1,12 +1,13 @@
 import {renderEnd} from "../screens/endGameScreen"
 
 class GameView{
-    constructor(game,ctx,musicPlayer){
+    constructor(game,ctx,musicPlayer,songTitle){
         this.game=game;
         this.ctx=ctx;
         this.setStaticKeys();
         this.setupBinds();
-        this.song=require("../song_scripts/song1.json");
+        const formattedSongTitle=songTitle.split(" ").join("_");
+        this.song=require(`../song_scripts/${formattedSongTitle}.json`);
         this.gameRequest;
         this.musicPlayer=musicPlayer;
     }

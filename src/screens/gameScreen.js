@@ -3,8 +3,7 @@ import {renderHome} from "./homeScreen"
 import {GameView} from "../scripts/gameView"
 import {Game} from "../scripts/game"
 import {MusicPlayer} from "../scripts/musicPlayer"
-export const renderGame = function () {
-
+export const renderGame = function (song) {
     // buttons rendered on screen
     const screen = document.getElementById("screen");
     screen.classList.add("game")
@@ -31,10 +30,10 @@ export const renderGame = function () {
 
 
     //creating instances for the game
-    const musicPlayer = new MusicPlayer();
+    const musicPlayer = new MusicPlayer(song);
     const ctx = canvas.getContext("2d");
     const game = new Game();
-    const newGameView = new GameView(game, ctx,musicPlayer);
+    const newGameView = new GameView(game, ctx,musicPlayer,song);
 
     //buttons functionality
     const audio = document.querySelector("audio")

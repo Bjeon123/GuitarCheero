@@ -1,7 +1,7 @@
 import {renderHome} from "./homeScreen"
 import {renderGame} from "./gameScreen"
 export const renderSongs = function () {
-    const songs =["Me and My Guitar"]
+    const songs = ["F.C.P.R.E.M.I.X","Me and My Guitar"]
     const screen = document.getElementById("screen");
     screen.classList.add("home")
     screen.innerHTML="";
@@ -22,7 +22,7 @@ export const renderSongs = function () {
         songsList.appendChild(li)
         li.addEventListener("click",function(){
             screen.classList.remove("home");
-            renderGame();
+            renderGame(li.innerText);
         })
     });
     screen.appendChild(h1)

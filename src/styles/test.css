@@ -76,8 +76,9 @@ button{
 }
 
 .gameBackButton{
-    position: absolute;
-    bottom: 635px;
+    position: relative;
+    bottom: 270px;
+    right: 600px;
     font-size: 15px;
     font-weight: bold;
     display:block;
@@ -112,10 +113,10 @@ li:hover{
 }
 
 .game-logo{
-    display: block;
-    position: absolute;
+    position: relative;
     height: 70px;
-    bottom: 690px;
+    bottom: 350px;
+    right: 660px;
     margin-left: 225px;
 }
 
@@ -175,4 +176,15 @@ h2{
 .link:hover{
     cursor: pointer;
     background-color: white;
+}
+
+.start-button{
+    height: 250px;
+    width: 500px;
+    position: relative;
+    right: 870px;
+}
+
+.start-button:hover{
+    cursor: pointer;
 }

@@ -33,7 +33,6 @@ export const renderHome = function(){
     linkdinFavicon.classList.add("link");
     linkdinFavicon.src = "src/assets/images/pngegg (1).png";
     linkdinLink.appendChild(linkdinFavicon);
-
     links.appendChild(githubLink);
     links.appendChild(linkdinLink);
     screen.appendChild(links);

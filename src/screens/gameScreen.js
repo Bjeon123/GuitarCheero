@@ -24,6 +24,12 @@ export const renderGame = function () {
     logo.classList.add("game-logo");
     screen.appendChild(logo);
 
+    const clickToStart=document.createElement("img");
+    clickToStart.classList.add("start-button");
+    clickToStart.src ="src/assets/images/start_button.png";
+    screen.appendChild(clickToStart);
+
+
     //creating instances for the game
     const musicPlayer = new MusicPlayer();
     const ctx = canvas.getContext("2d");
@@ -46,13 +52,12 @@ export const renderGame = function () {
         renderHome();
     })
 
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "m") {
-            setTimeout(function () {
-                musicPlayer.play()
-            }, 1500);
-            newGameView.start();
-        }
+    clickToStart.addEventListener("click", function(){
+        screen.removeChild(clickToStart);
+        setTimeout(function () {
+            musicPlayer.play()
+        }, 1500);
+        newGameView.start();
     })
 }
 

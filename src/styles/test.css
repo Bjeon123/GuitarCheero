@@ -141,3 +141,9 @@ h2{
     color: #879cf2;
     font-size: 30px;
 }
+
+.instructions{
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+}

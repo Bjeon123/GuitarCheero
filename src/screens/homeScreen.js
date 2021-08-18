@@ -1,4 +1,6 @@
 import {renderSongs} from "./songsScreen"
+import { renderInstruction } from "./instructions";
+
 export const renderHome = function(){
     const screen = document.getElementById("screen");
     screen.classList.add("home");
@@ -15,5 +17,9 @@ export const renderHome = function(){
     screen.appendChild(instructionButton);
     playBttn.addEventListener("click",function(){
         renderSongs();
+    })
+    instructionButton.addEventListener("click",
+    function(){
+        renderInstruction();
     })
 }

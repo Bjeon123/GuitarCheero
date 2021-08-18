@@ -11,9 +11,11 @@ class Game{
         this.stats = new Stats();
         this.makeGuitarKeys();
     }
+
     static DIM_X = 600;
     static DIM_Y = 700;
     static radius = Game.DIM_X/14;
+
     static POSITIONS = {
         "green": [180, 100],
         "red": [240, 100],
@@ -21,6 +23,7 @@ class Game{
         "blue": [360, 100],
         "orange": [420, 100]
     }
+    
     static DESTINATION = {
         "green": [85.71428571428571, 600],
         "red": [192.85714285714283, 600],
@@ -28,6 +31,7 @@ class Game{
         "blue": [407.14285714285717, 600],
         "orange": [514.2857142857142, 600]
     }
+
     static COLORS = {
         0: "green",
         1: "red",
@@ -106,14 +110,9 @@ class Game{
         },500)
     }
 
-    numCurrentNotes(){
-        console.log(this.notes.length);
-    }
-
     step() {
         this.checkCollisions();
         this.moveNotes();
-        this.numCurrentNotes();
     };
 
 }

@@ -200,6 +200,35 @@ h2{
     margin: 0 auto;
     width: 500px;
 }
+
+.end-game{
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+    height: 200px;
+}
+
+.links-songs-screen{
+    position: relative;
+    top: 373px;
+}
+
+.links-home{
+    top: 120px;
+    position: relative;
+}
+
+.link{
+    width: 50px;
+    margin: 3px;
+    border: 1px solid black;
+    border-radius: 10%;
+}
+
+.link:hover{
+    cursor: pointer;
+    background-color: white;
+}
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/

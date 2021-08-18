@@ -7,7 +7,7 @@ export const renderEnd = function(statsObject){
     screen.innerHTML = "";
     const logo = document.createElement("img");
     logo.src = "src/assets/images/logo.png"
-    logo.classList.add("logo")
+    logo.classList.add("end-game")
     screen.appendChild(logo);
     const backBttn = document.createElement("button");
     backBttn.innerText = "Back to Songs";

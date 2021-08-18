@@ -62,8 +62,10 @@ class GameView{
         this.game.step();
         if (this.musicPlayer.audio.currentTime > 5 && this.game.notes.length===0){
             cancelAnimationFrame(this.gameRequest);
-            this.musicPlayer.stop();
-            return renderEnd(this.game.stats);
+            setTimeout(function(){
+                this.musicPlayer.stop();
+                return renderEnd(this.game.stats);
+            }.bind(this),1000)
         }
         else if(this.musicPlayer.stopped){
             this.musicPlayer.stop();

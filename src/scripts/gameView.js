@@ -23,9 +23,13 @@ class GameView{
         }
     }
 
+
     setupBinds() {
         window.addEventListener("keydown", function (e) {
-            if (GameView.KEYS[e.key] && GameView.KEYS) {
+            if (GameView.KEYS[e.key]){
+                setTimeout(function(){
+                    GameView.KEYS[e.key].pressed=false;
+                }.bind(this),400)
                 GameView.KEYS[e.key].pressed=true;
             }
         });
@@ -63,10 +67,10 @@ class GameView{
         this.game.step();
         if (this.musicPlayer.audio.currentTime > 5 && this.game.notes.length===0){
             cancelAnimationFrame(this.gameRequest);
+            this.musicPlayer.stop();
             setTimeout(function(){
-                this.musicPlayer.stop();
                 return renderEnd(this.game.stats);
-            }.bind(this),1000)
+            }.bind(this),2000)
         }
         else if(this.musicPlayer.stopped){
             this.musicPlayer.stop();

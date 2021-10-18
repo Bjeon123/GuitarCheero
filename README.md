@@ -49,6 +49,7 @@ __Thursday__: Debug and make sure the code is production grade <br />
 
 Favorite Code Snippet
 ----------------------------------
+![favCode](/src/assets/images/favCode.jpeg)
 
 Bonus
 ---------------------------------

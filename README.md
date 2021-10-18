@@ -4,6 +4,7 @@ Guitar Cheero
 Live Link
 ---------------------------------
 https://bjeon123.github.io/GuitarCheero/
+(/linkdInUsesThis.png)
 
 Background
 ---------------------------------

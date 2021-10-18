@@ -21,6 +21,7 @@ export const renderHome = function(){
 
     const githubLink = document.createElement("a")
     githubLink.href ="https://github.com/Bjeon123/GuitarCheero";
+    githubLink.setAttribute('target', '_blank');
     const githubFavicon= document.createElement("img")
     githubFavicon.classList.add("link");
     githubFavicon.src = "src/assets/images/pngegg.png"
@@ -28,7 +29,8 @@ export const renderHome = function(){
 
 
     const linkdinLink =document.createElement("a") ;
-    linkdinLink.href ="https://www.linkedin.com/in/byung-jeon-01a68812a/";
+    linkdinLink.href ="https://www.linkedin.com/in/byung-sam-jeon-01a68812a/";
+    linkdinLink.setAttribute('target', '_blank');
     const linkdinFavicon = document.createElement("img");
     linkdinFavicon.classList.add("link");
     linkdinFavicon.src = "src/assets/images/pngegg (1).png";

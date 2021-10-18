@@ -47,6 +47,9 @@ __Tuesday__: Make different note patterns based on the song picked <br />
 __Wenesday__: Perfect all functionality of project and add bonus content <br />
 __Thursday__: Debug and make sure the code is production grade <br />
 
+Favorite Code Snippet
+----------------------------------
+
 Bonus
 ---------------------------------
 - Audience cheering based on how many notes are hit in a row

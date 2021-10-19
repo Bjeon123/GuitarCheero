@@ -70,7 +70,7 @@ class GameView{
             this.musicPlayer.stop();
             setTimeout(function(){
                 return renderEnd(this.game.stats);
-            }.bind(this),2000)
+            }.bind(this),1000)
         }
         else if(this.musicPlayer.stopped){
             this.musicPlayer.stop();

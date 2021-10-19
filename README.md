@@ -49,7 +49,29 @@ __Thursday__: Debug and make sure the code is production grade <br />
 
 Favorite Code Snippet
 ----------------------------------
-![favCode](/src/assets/images/favCode.jpeg)
+```javascript
+    start(){
+        for(const note in this.song) {
+            if (Array.isArray(this.song[note])){
+                for (let i = 0; i < this.song[note].length;i++){
+                    setTimeout(
+                        function () {
+                            this.game.makeNotes(this.song[note][i])
+                        }.bind(this), 0 + parseInt(note)
+                    )
+                }
+            }
+            else{
+                setTimeout(
+                    function(){
+                        this.game.makeNotes(this.song[note])
+                    }.bind(this), 0 + parseInt(note)
+                )
+            }
+        }
+        this.gameRequest=this.animate();
+    }
+```
 <br />
 This snippet of code is my favorite of the whole project because it allowed me to personalize the song notes to the flow of the song. Every single note that is rendered on the screen was created with a specific timeout in a json file that is read before the game. Although this made making song scripts more tedious, the specificity of notes made the clone much more like the actual Guitar Hero. Also thankfully songs usually have repetitive notes which allowed me to make the song json files in microsoft excel by appending repeating song patterns.
 
